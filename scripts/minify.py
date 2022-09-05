@@ -1,7 +1,8 @@
-import re
+import os, re
 
-input_file = "../public/index.html"
-output_file = "../index.html"
+path = os.path.dirname(os.path.abspath(__file__))
+input_file = os.path.join(path, "../public/index.html")
+output_file = os.path.join(path, "../index.html")
 
 lines = []
 with open(input_file, 'r', encoding='utf-8') as f:
