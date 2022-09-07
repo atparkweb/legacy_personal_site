@@ -23,13 +23,14 @@
         text-decoration: none;
       }
       a:link {
+        opacity: 0.8;
         display: inline-block;
         text-decoration: none;
         color: rgb(255, 255, 0);
         border-bottom: 1px dotted rgba(255, 255, 0, 0.5);
       }
       a:hover {
-        opacity: 0.8;
+        opacity: 1.0;
       }
       a:visited {
         color: rgba(255, 255, 0, 0.5);
@@ -143,6 +144,16 @@
         html, body {
           font-size: 24px;
         }
+        a:link {
+          text-indent: 0;
+          transition-property: text-indent;
+          transition-duration: 500ms;
+        }
+        a:hover {
+          text-indent: 0.5em;
+          transition-property: text-indent;
+          transition-duration: 100ms;
+        }
         .topHeader {
           position: fixed;
           left: 1.618rem;
@@ -151,6 +162,7 @@
         .header__navigation__list-item {
           display: block;
           padding: 0;
+          line-height: 3.5em;
           border-left: none;
         }
         .topic:first-child {
